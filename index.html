@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayank Joshi | Personal Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <script>
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") === "dark" ? "dark" : "light"
+      );
+    </script>
+  </head>
+  <body>
+    <div class="theme-toggle" role="group" aria-label="Color theme">
+      <button type="button" id="themeLight" aria-pressed="true">Light mode</button>
+      <button type="button" id="themeDark" aria-pressed="false">Dark mode</button>
+    </div>
+    <header class="hero">
+      <p class="eyebrow">Personal Profile</p>
+      <h1>Mayank Joshi</h1>
+      <p class="tagline">Software Engineer</p>
+      <p class="location">Uttrakhand, India</p>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <div class="about-content">
+          <img
+            class="profile-image"
+            src="images/image.png"
+            alt="PLACEHOLDER: add a profile photo at images/PLACEHOLDER-profile.jpg"
+            width="160"
+            height="160"
+          />
+          <div class="about-text">
+            <p>
+              An aspiring software engineer with a passion for building scalable
+              and efficient systems.
+            </p>
+            <p>
+              I am a software engineer with a passion for building scalable and
+              efficient systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul class="skill-list">
+          <li>C</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>MySQL</li>
+        </ul>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="project-search">
+          <label class="visually-hidden" for="projectSearch">Search projects</label>
+          <input
+            id="projectSearch"
+            type="search"
+            placeholder="Search projects by title, description, or technology"
+            autocomplete="off"
+            aria-controls="projects-list"
+          />
+        </div>
+        <p id="projectSearchEmpty" class="project-search-empty" hidden>
+          No projects match your search.
+        </p>
+        <ul id="projects-list" class="projects-list">
+          <li class="project-card" data-technologies="C++ Python">
+            <h3 class="project-title">
+              <a href="https://github.com/joshimayank870-rgb/Factorial_1099" target="_blank" rel="noopener noreferrer">
+                C++ to Python Program Conversion
+              </a>
+            </h3>
+            <p class="project-description">
+              A collection of three basic programming exercises converted from C++ to Python, covering factorial calculation, Fibonacci series generation, and the conversion of C++ structures into Python dictionaries.
+            </p>
+            <p class="project-tech"><span>C++</span><span>Python</span></p>
+            <p class="project-links">
+              Repositories:
+              <a href="https://github.com/joshimayank870-rgb/Factorial_1099" target="_blank" rel="noopener noreferrer">Factorial</a>
+              <a href="https://github.com/joshimayank870-rgb/Fibonacci_1099" target="_blank" rel="noopener noreferrer">Fibonacci</a>
+              <a href="https://github.com/joshimayank870-rgb/Dictonary_1099" target="_blank" rel="noopener noreferrer">Struct to Dictionary</a>
+            </p>
+          </li>
+          <li class="project-card" data-technologies="Python">
+            <h3 class="project-title">
+              <a href="https://github.com/joshimayank870-rgb/buggy-python-1099" target="_blank" rel="noopener noreferrer">
+                Python Debugging and Testing
+              </a>
+            </h3>
+            <p class="project-description">
+              A Python programming assignment focused on identifying and correcting errors in existing code. The project also includes a test file to verify the corrected program's behavior and check whether it works as expected.
+            </p>
+            <p class="project-tech"><span>Python</span></p>
+          </li>
+          <li class="project-card" data-technologies="Python">
+            <h3 class="project-title">
+              <a href="https://github.com/joshimayank870-rgb/messy-python-1099" target="_blank" rel="noopener noreferrer">
+                Python Code Refactoring with Cursor AI
+              </a>
+            </h3>
+            <p class="project-description">
+              A Python program focused on improving the structure and readability of an existing messy Python program using Cursor AI, while preserving its original output and intended behavior.
+            </p>
+            <p class="project-tech"><span>Python</span></p>
+          </li>
+          <li class="project-card" data-technologies="HTML CSS JavaScript">
+            <h3 class="project-title">
+              <a href="https://github.com/joshimayank870-rgb/QUIZ_1099" target="_blank" rel="noopener noreferrer">
+                Queez
+              </a>
+            </h3>
+            <p class="project-description">
+              A quiz-based web project built using HTML, JavaScript, and CSS, with the initial HTML and JavaScript developed independently and Cursor AI used to create the CSS styling.
+            </p>
+            <p class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+          </li>
+          <li class="project-card" data-technologies="HTML CSS JavaScript">
+            <h3 class="project-title">
+              <a href="https://github.com/joshimayank870-rgb/ReadingList" target="_blank" rel="noopener noreferrer">
+                Reading Book App
+              </a>
+            </h3>
+            <p class="project-description">
+              A web application for keeping track of books read and saving reading progress, built using HTML, CSS, and JavaScript.
+            </p>
+            <p class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="weather-section" class="weather-section">
+        <h2>Live Weather Checker</h2>
+        <p>Enter a city to check its current weather.</p>
+        <div class="weather-controls">
+          <input id="cityInput" type="text" placeholder="Enter city (e.g., Jaipur)" />
+          <button id="weatherButton" type="button">Get Weather</button>
+        </div>
+        <p id="weatherResult" aria-live="polite">Enter a city and click Get Weather.</p>
+      </section>
+
+      <section id="chatbot" class="chatbot-section" aria-labelledby="chatbot-heading">
+        <h2 id="chatbot-heading">Ask about this portfolio</h2>
+        <p>
+          Ask about skills, projects, or background. Answers use the content on
+          this page.
+        </p>
+        <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+          <p class="bot-message">Hi! Ask me about my skills, projects, or background.</p>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <label class="visually-hidden" for="chatInput">Chat message</label>
+          <input
+            id="chatInput"
+            type="text"
+            name="message"
+            placeholder="Ask a question"
+            autocomplete="off"
+            maxlength="2000"
+          />
+          <button type="submit" id="chatSend">Send</button>
+        </form>
+        <p id="chatStatus" role="status"></p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:joshimayank870@gmail.com"
+              >joshimayank870@gmail.com</a
+            >
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/joshimayank870-rgb"
+              >github.com/joshimayank870-rgb</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      
+    </footer>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
